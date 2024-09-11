@@ -1,0 +1,371 @@
+1-2
+C프로그래밍 필기장
+
+C언어의 기본 단위는 함수
+모듈러 프로그래밍
+
+출력값: return 값 
+
+정의: Definition
+호출: call
+인자: parameter
+전달: passing
+
+stdio = standard input output 
+
+#include <stdio.h>는 ;가 없다 -> C preprocessor directives는 C의 문장이 아니다. 
+컴파일러 전에 C preprocessor directives를 먼저처리
+ex) #이 붙어있는 inculde, definite
+
+주석(Comment)
+
+1-3
+*연산자의 우선순위*
+바이트 비트
+
+변수, 기능 
+정의: 어떤 값을 정해서 자리가 잡힌다. vs 선언
+
+기계어 -> Assembly address
+1. Symbolic address -> 주소값 ex) num1, num2
+2. mnemonic instruction 
+
+printf("%d\n", 3+4);
+7
+7의 메모리를 알 수가 없음 -> 변수 필요
+
+= assignment
++ plus
+- substract
+* multi
+/ divide
+% modulus operation 정수 연산에만 쓰임.
+
+정수형 7/3 -> 2
+실수형 7.0/3.0 -> 2.3333 허용
+
+Association 결합
+Associativity 결합성
+
+%를 출력하고 싶으면 "%%" -> %
+
+복합 대입 연산자 Assignment operater
+중요한거 +=임 =+가 아니라
+
+0 과 1 교체 one comprement
++1   two comprement
+
+
+실수 계산은 꼭 맞을 거라 생각 ㄴㄴ
+3/1은 정확하게 표현 불가
+
+float는 double의 2배
+
+논리 연산자
+&& AND
+|| OR
+!  NOT
+
+비트 연산자
+& AND
+| OR
+^  NOT
+
+int num1 = 15; // byte byte byte 00001111 //
+
+*비트 연산자 논리 연산자 구분
+int num3 = num1 & num2 4
+int num3 = num1 && num2 1
+
+0001 0000 16
+1110 1111 +1
+1111 0000 -16
+0000 1111 +1
+0001 0000 16
+
+char 숫자를 넣어도 됨
+
+-128 이상 +127 이하
+unsinged char 0 ~ 256
+
+컴퓨터에서 소수점 있는 상수 > double로 인식
+소수점 없는 상수 > int로 인식
+
+정밀도 15자리 2의 15승까지 표현
+
+     hex
+'A' 41 0100 0001
+'B' 42 0100 0010
+'C' 43 0100 0011
+
+%c 'A'
+%d 65
+%h 41
+
+문자도 덧셈, 뺄셈 가능
+A+32 > a
+
+모든 연산은 컴파일 할 때 X
+실행할 때 일어남
+
+상수는 이름 없을 때 리터럴 상수
+& : 주소값을 알 수 있는 
+&상수 알 수 없음
+
+float num1 = 5.789; // 경고 메시지 발생  double로 인식하기 때문에 //
+5.789f 접미사 붙여서 말해줌
+
+심볼릭 상수는 선언과 동시에 초기화 해줘야 함
+WHy 나중에 값을 못 바꾸기 때문에
+
+왼편을 기준으로 형 변환 발생 (Lvalue)
+
+07 반복뮨
+들여쓰기 indentation
+
+반복문 실수로 쓰는 경우
+1. 반복문 안 되게 하거나
+2. 무한루프
+
+반복문 중첩 3개면 프로그램 속도가 현저히 느려짐
+
+내 머릿 속으로 코딩 dry running
+
+Fibornacci number
+
+continue 
+증감식은 진행하고 conitnue로
+
+prime number 소수
+
+Switch
+:붙게 되면 레이블
+주소값을 알게 해주는 거
+
+Switch 조건식에 정수가 와야함(문자도 숫자)
+할 수는 있음
+조건식 n%10
+
+modular programming 
+printf는 %d, a argument 값이 변하는 가변적 함수 > 다음 학기
+
+c언어는 반환 '값'만 넘겨줌
+- 포인터는 주소값, 다른 언어
+
+같은 이름이라도 같은 함수 내만 아니라면
+메모리 주소가 달라 다름
+
+같은 이름의 함수는 사용 불가x
+
+정의 Definition
+선언 Declaration
+
+Storage class
+auto, local 성질
+
+global, /extern 키워드
+static
+register
+
+i의 scope(범위)는
+
+int i = 80; 외부변수: function의 끝까지
+int main()
+{
+    int i(1) = 0;
+ 1
+    for(int i(2) = 0; ~)
+    {
+        2 범위는 안 쪽에 있을 수록 강함
+               여기서 i는 2임.
+
+GetAbsValue(n1) Automatic 함수
+
+static 정적
+
+int a[4] = a는 int형 4개 짜리다 
+               a is 4 element array of int
+
+a[0] 첫 번째 index는 1이 아닌 0으로 시작
+a는 주소
+
+int = 각각은 int 타입이다 > 각각은 같은 타입이여야 함
+
+index
+
+배열하면 메모리
+
+문자열: null로 끝나는 문자 배열
+문자열과 문자 배열 different > 맨 끝에 null(\0)이 있어야 함
+
+*배열의 이름 자체가 주소값 
+&기호x
+
+char arr1[] = { 'H', 'i', '~' }; 문자 배열
+char arr2[] = { 'H', 'i', '~', '\0' }; 문자열
+문자열은 문자배열의 부분 집합
+
+포인터 개념이 가장 C언어스러운 언어
+
+int num = 7;
+int* pnum;
+pnum is pointer to int
+
+pnum = &num;
+&: address of num
+
+pnum = num(10)의 주소값
+address
+*pnum = 10
+deference(contant pnum)
+
+printf("%d", *pnum);
+printf("%d", num);
+둘 다 20
+
+arr is 3 element array of int
+
+배열의 이름은 주소
+포인터 변수는 아님
+
+포인터는 변수 상수x
+주소값은 상수라도
+
+*arr1 arr1은 주소 *arr1은 1
+arr1은 변경 x *arr1은 가능
+index 이용
+
+
+ptr == arr
+*ptr == *arr
+
+ptr++;
+더하게 되면 다음 element의 주소로
+1000번지 > 1001번지 x
+            >  1004번지 (element int라 가정)
+
+ptr[0] == *(ptr+0)
+ptr[1] == *(ptr+1)
+
+a[i] == *(a+i)
+&a[i] == a+i
+
+
+printf (1+2)
+1과 2가 어디에 할당되어 있다
+
+어떤 상수는 상수의 주소값이 반환
+문자열이면 null까지
+int면 4bytes까지
+int *p[5];
+3      2 1
+1. p is ptr to 5 element array of int(x)
+
+2. p is 5 element array of ptr to int(o)
+연산자의 우선순위에 따라 결정
+
+strArr 주소1 > "simple"
+          주소2 > "String"
+          주소3 > "Array"
+
+문자열은 끝에 null이 있기 때문에 함수 호출 때 문자열의 길이를 전달할 필요가 없다.
+배열은 필요하다.
+
+하드코딩 
+
+예외적 허용) 형식 인자 p[]
+array의 이름이지만 포인터는 아니다.
+
+int ++*p
+++P[]도 가능
+
+int *ptr = arr; /*int ptr[] = arr; 로 대체 불가*/
+int ptr [10];
+ptr = arr; x
+ptr point가 x, 주소값 상수
+
+const int *ptr;
+ptr is pointer to const int 
+
+const int *ptr;
+int  * const ptr; 
+
+ptr is const * to int
+
+구조체
+우선순위에 따라
+#include <math.h> sqrt 
+
+man.name = "안성준"; x
+why? man은 배열의 이름임 strcpy 함수를 사용해야 함
+
+연산자의 우선순위에 따라 
+원하는 대로 하고 싶으면 괄호를 통해
+
+배열 초기화 시 사이즈 지정 안 해도 됨 자동 지정
+int arr [3] = {1,2,3};
+3필요 x
+
+(*pptr).xpos == pos.xops
+
+구조체는 멤버
+배열 element
+why? 구조체는 멤버가 동일하지 않음
+배열 elemnt가 타입 동일
+
+우선순위가 같은 경우 
+if left > right인 경우 left가 먼저 실행
+
+Stream
+process와 프로그램의 관계
+
+c레벨에서 FILE 구조체 포인터를 사용
+
+descript
+
+Buffer
+
+FILE * fp = fopen("C:\\Project\\data.txt", "w");
+다른 디렉토리
+
+fflush 밀어내다
+입력하고 관계x
+출력하고 관계 o
+출력버퍼를 비우는 함수
+
+#include <stdio.h>
+
+
+
+w는 새로 쓰기 a는 append 추가로 쓰기
+
+문자 데이터 txt 가능 why? 텍스트 데이터니까
+바이너리 데이터는 그림 같은 거
+
+t안 붙이면 기본이 t(text)
+
+표준 입출력 시스템
+
+char가 안전
+속도는 별 차이 x
+
+4byte 12개
+
+buf에다 4byte 12개할 
+
+scanf는 엔터를 기준으로 데이터 입력받음
+
+1234-
+1이 아닌 fops는 2를저장
+
+char * str = : "Simple String";
+str은 바꿀 수 있자먼 "Simple String"은 못 바꾼다 > stringcopy도 안 됨, 배열로 바꿔서 해결
+
+fgets(str, sizeof(str), stdin); 은 마지막 '\0'
+
+First~Second\0 범위가 넘어가면 문자열의 성질 x
+
+문자열이 크다 > 사전에서 더 먼저 나온다
+
+
+
